@@ -698,10 +698,17 @@ header{
   background-color: var(--white);
   padding: 10px;
   border-radius: 10px;
+  transition: 0.3s all linear;
+}
+
+.weekly-contint .weekly-card:hover{
+  transform: translateY(-8px);
+  box-shadow: 0px 5px  10px rgb(194, 123, 127, 0.3);
 }
 
 .weekly-contint .weekly-card .weekly-card-img{
   width: 100%;
+  height: 165px;
   border-radius: 7px;
   overflow: hidden;
 }
@@ -729,7 +736,7 @@ header{
   font-weight: 500;
   color: var(--dark);
   font-size: 0.9rem;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .weekly-contint .weekly-card .weekly-title{
@@ -763,11 +770,249 @@ header{
   object-fit: contain;
 }
 
-.weekly-contint .weekly-card .weeklly-info .weekly-rate img:hover{
-  transform: scale(1.5) translateY(-5px);
+/*************achievments******************/
+
+.achiev-contint{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 40px;
 }
 
-.weekly-contint .weekly-card .weeklly-info .weekly-rate img:hover + img{
-  transform: scale(1.3) translateY(-2px);
+.achiev-contint .achiev-box{
+  width: calc((100% / 3) - 14px);
+  box-shadow: 0 0px 10px rgb(0 0 0 / 0.1);
+  border-radius: 10px;
+  transition: 0.3s all ease-in-out;
+  overflow: hidden;
 }
 
+.achiev-contint .achiev-box:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px rgb(0 0 0 / 0.1);
+}
+
+.achiev-contint .achiev-box .achiev-img{
+  width: 100%;
+  height: 260px;
+}
+
+.achiev-contint .achiev-box .achiev-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.achiev-contint .achiev-box .achiev-body{
+  padding: 35px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.achiev-contint .achiev-box .achiev-body::after{
+  content: '';
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: url('../images/icons/award.svg') center / contain no-repeat;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+
+.achiev-contint .achiev-box .achiev-body .achiev-title{
+  font-size: 1.7rem;
+  margin-bottom: 0.8em;
+  font-weight: 500;
+  color: var(--dark);
+  text-transform: capitalize;
+}
+
+.achiev-contint .achiev-box .achiev-body .achiev-desc{
+  text-transform: capitalize;
+  color: var(--dark-gray);
+  line-height: 1.7;
+}
+
+/****************event*************** */
+
+.events{
+  background-color: var(--scandary);
+}
+
+.event-contint{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.event-contint .event-box{
+  width: calc((100% / 4) - 1px);
+  border-radius: 7px;
+  background-color: var(--white);
+  padding: 60px 15px 30px;
+  transition: 0.3s all ease-in-out;
+}
+
+.event-contint .event-box:hover{
+  box-shadow: 0px 5px  10px rgb(194, 123, 127, 0.1);
+  transform: translateY(-8px);
+}
+
+.event-contint .event-box .event-date{
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 20px;
+  opacity: 0.6;
+  transition: 0.6s all ease-in-out;
+}
+
+.event-contint .event-box:hover .event-date{
+  opacity: 1;
+}
+
+.event-contint .event-box .event-date .day{
+  font-size: 4rem;
+  color: var(--dark);
+  font-weight: 700;
+}
+
+.event-contint .event-box .event-date .month{
+  font-size: 2rem;
+  color: var(--dark);
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.event-contint .event-box .event-title{
+  font-size: 1.7rem;
+  color: var(--dark);
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+.event-contint .event-box .event-desc{
+  color: var(--dark-gray);
+  line-height: 1.7;
+  font-size: .95rem;
+  margin-bottom: 15px;
+}
+
+.event-contint .event-box .event-link{
+  color: var(--primary);
+  position: relative;
+  padding: 4px 8px;
+  z-index: 1;
+}
+
+.event-contint .event-box .event-link::after{
+  content: '';
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--dark);
+  opacity: 0.5;
+  border-radius: 50%;
+  z-index: -1;
+  transition: 0.15s top linear,
+              0.15s border-radius linear 0.3s,
+              0.15s width linear 0.3s,
+              0.15s height linear 0.3s,
+              0.15s opacity linear 0.3s;
+}
+
+.event-contint .event-box .event-link:hover:after{
+  top: 50%;
+  border-radius: 0;
+  opacity: 0.1;
+  width: 100%;
+  height: 100%;
+}
+
+/******************testimonials********************** */
+
+.testimonials-contint{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 30px 0;
+  width: 100%;
+  scroll-snap-type: X mandatory;
+  scroll-behavior: smooth;
+  overflow: auto;
+}
+
+.testimonials-contint::-webkit-scrollbar{
+  background-color: transparent;
+}
+
+.testimonials-contint::-webkit-scrollbar-thumb{
+  background-color: var(--dark);
+  border-radius: 10px;
+}
+
+.testimonials-contint .testimonials-box{
+  width: calc((100% / 3) - 15px);
+  border-radius: 10px;
+  background-color: var(--scandary);
+  padding: 50px 15px 30px;
+  transition: 0.3s all ease-in-out;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+.testimonials-contint .testimonials-box .testimonials-desc{
+  color: var(--dark-gray);
+  line-height: 1.7;
+  font-size: .95rem;
+  margin-bottom: 20px;
+}
+
+.testimonials-contint .testimonials-box .testimonials-data{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  border-top: 1px solid var(--primary);
+}
+
+.testimonials-contint .testimonials-box .testimonials-data .testimonials-img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+  overflow: hidden;
+}
+
+.testimonials-contint .testimonials-box .testimonials-data .testimonials-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonials-contint .testimonials-box .testimonials-data .testimonials-name{
+  font-size: 1.2rem;
+  color: var(--dark);
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+.testimonials-contint .testimonials-box .testimonials-data .testimonials-job{
+  font-style: italic;
+  color: var(--dark-gray);
+  font-size: 0.9em;
+  font-weight: 500;
+  text-transform: capitalize;
+}

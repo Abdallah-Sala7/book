@@ -11,7 +11,7 @@ window.addEventListener('scroll', () => {
     nav.classList.remove('active');
   }
 
-  if (window.scrollY >= stats.offsetTop ) {
+  if (window.scrollY >= stats.offsetTop - window.innerHeight / 2) {
     if (!start) {
       statsContainer.forEach(el => {
         let endNum = parseInt(el.dataset.target);
