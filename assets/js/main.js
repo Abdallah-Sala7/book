@@ -29,3 +29,17 @@ window.addEventListener('scroll', () => {
     start = true;
   }
 } );
+
+const testimonials = document.querySelector('.testimonials-contint');
+const testimonialNextBtn = document.querySelector('.scroll-btn-next');
+const testimonialPrevBtn = document.querySelector('.scroll-btn-prev');
+
+testimonialNextBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  testimonials.scrollBy(10, -testimonials.offsetWidth);
+} );
+
+testimonialPrevBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  testimonials.scrollBy(-10, -testimonials.offsetWidth);
+} );
