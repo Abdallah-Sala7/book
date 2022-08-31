@@ -37,9 +37,14 @@ const testimonialPrevBtn = document.querySelector('.scroll-btn-prev');
 testimonialNextBtn.addEventListener('click', (e) => {
   e.preventDefault();
   testimonials.scrollBy(10, -testimonials.offsetWidth);
+
+  console.log(testimonials.scrollLeft);
 } );
 
 testimonialPrevBtn.addEventListener('click', (e) => {
   e.preventDefault();
   testimonials.scrollBy(-10, -testimonials.offsetWidth);
+
+  console.log(testimonials.scrollLeft);
+
 } );
