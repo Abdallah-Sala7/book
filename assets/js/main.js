@@ -1,4 +1,3 @@
-
 const nav = document.querySelector('nav');
 const stats = document.querySelector('.stats');
 const statsContainer = document.querySelectorAll('.state-num');
