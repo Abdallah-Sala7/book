@@ -1,0 +1,97 @@
+
+footer{
+  background-color: var(--scandary);
+  padding-top: 80px;
+}
+
+footer .footer-contint{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .footer-contint .footer-logo{
+  width: 190px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+footer .footer-contint .footer-logo img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+footer .footer-contint .footer-menu{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+footer .footer-contint .footer-menu .footer-link{
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  color: var(--dark);
+  font-weight: 500;
+  transition: 0.3s color ease-in-out;
+}
+
+footer .footer-contint .footer-menu .footer-link:hover{
+  color: var(--primary);
+}
+
+footer .footer-contint  .social-box{
+  margin-bottom: 30px;
+}
+
+footer .footer-contint  .footer-bottom{
+  width: 100%;
+  padding: 20px 0;
+  border-top: 1px solid #c27b7f80;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .footer-contint  .footer-bottom .footer-copyright{
+  color: var(--dark);
+  font-size: 1.2rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+footer .footer-contint  .footer-bottom .heart{
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+}
+
+footer .footer-contint  .footer-bottom .heart img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: heartBeat 1s infinite;
+}
+
+@keyframes heartBeat{
+  0%{
+    transform: scale(1);
+    filter: var(--primary-img);
+  }
+  50%{
+    transform: scale(1.1);
+    filter: var(--primary-img)  saturate(3);
+  }
+  100%{
+    transform: scale(1);
+    filter: var(--primary-img);
+  }
+}
+
+footer .footer-contint  .footer-bottom .author{
+  color: var(--dark);
+  font-size: 1.3rem;
+  font-weight: 500;
+}

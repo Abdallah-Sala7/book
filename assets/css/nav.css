@@ -1,0 +1,130 @@
+nav{
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  right: 30px;
+  transform: translateY(30px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: var(--white);
+  z-index: 1111;
+  transition: 0.3s all linear, 0s transform linear;
+}
+
+nav.active{
+  transform: translate(0);
+  position: fixed;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-contint{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav-contint .brand-logo{
+  width: 170px;
+  height: 40px;
+  background-color: var(--white);
+}
+
+.nav-contint .brand-logo img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.nav-contint .navbar{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-contint .navbar .nav-item{
+  position: relative;
+  padding: 5px;
+  overflow: hidden;
+}
+
+.nav-contint .navbar .nav-item:hover{
+  overflow: visible;
+}
+
+.nav-contint .navbar .nav-item::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%);
+  width: 0px;
+  height: 2px;
+  background-color: var(--primary);  
+  transition: 0.3s all linear;
+}
+
+.nav-contint .navbar .nav-item.active::after,
+.nav-contint .navbar .nav-item:hover:after{
+  width: 50%;
+}
+
+.nav-contint .navbar .nav-item .nav-link{
+  color: var(--dark);
+  font-weight: 700;
+  text-transform: capitalize;
+  display: flex;
+  transition: 0.3s color linear;
+}
+
+.nav-contint .navbar .nav-item:hover .nav-link,
+.nav-contint .navbar .nav-item.active .nav-link{
+  color: var(--primary);
+}
+
+.nav-contint .navbar .nav-item .nav-link img{
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  margin-left: 5px;
+  filter: var(--dark-img);
+  transition: 0.3s all linear;
+}
+
+.nav-contint .navbar .nav-item:hover .nav-link img{
+  filter: var(--primary-img);
+  transform: rotate(180deg);
+}
+.nav-contint .navbar .nav-item.active .nav-link img{
+  filter: var(--primary-img);
+}
+
+.nav-contint .navbar .nav-item .dropdown{
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%,10px);
+  background-color: var(--white);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  opacity: 0;
+  transition: 0.3s all linear;
+}
+
+.nav-contint .navbar .nav-item:hover .dropdown{
+  opacity: 1;
+  transform: translate(-50%,0px);
+}
+
+.nav-contint .navbar .nav-item .dropdown .drop-link{
+  color: var(--dark);
+  text-transform: capitalize;
+  transition: 0.3s color linear;
+}
+
+.nav-contint .navbar .nav-item .dropdown .drop-link:hover{
+  color: var(--primary);
+}

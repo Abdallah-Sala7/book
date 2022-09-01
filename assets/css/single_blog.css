@@ -1,0 +1,128 @@
+header{
+  background-color: var(--scandary);
+  padding: 200px 0 80px;
+}
+
+header .header-contint{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header .header-contint .header-title{
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--dark);
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+header .header-contint .header-links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+header .header-contint .header-links a{
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--dark);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+header .header-contint .header-links a:not(:last-child){
+  margin-right: 10px;
+ color: var(--primary);
+}
+
+header .header-contint .header-links a:hover{
+  color: var(--primary);
+}
+
+header .header-contint .header-links span{
+  width: 20px;
+  height: 20px;
+}
+
+header .header-contint .header-links span img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: var(--dark-img);
+}
+
+/***************single-blog-img************** */
+
+.blog-contint .single-blog-img{
+  width: 100%;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.blog-contint .single-blog-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-contint .blog-info{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.blog-contint .blog-info .info-item{
+  display: flex;
+  align-items: center;
+}
+
+.blog-contint .blog-info .info-item .info-icon{
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.blog-contint .blog-info .info-item .info-icon img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: var(--primary-img);
+}
+
+.blog-contint .blog-info .info-item .info-text{
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--dark);
+}
+
+.blog-contint .blog-data .blog-title{
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--dark);
+  margin-bottom: 20px;
+}
+
+.blog-contint .blog-data .blog-text{
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--dark-gray);
+  line-height: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.blog-contint .blog-desc{
+  padding: 80px 100px;
+  background-color: var(--scandary);
+}
+
+.blog-contint .blog-desc p{
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--dark-gray);
+  line-height: 1.7rem;
+  text-align: center;
+}
