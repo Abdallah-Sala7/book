@@ -5,6 +5,8 @@
 header{
   background-color: var(--scandary);
   padding: 140px 0 80px;
+  position: relative;
+  z-index: 1;
 }
 
 .header-contint{
@@ -94,7 +96,7 @@ header{
   transition: 0.3s all linear 0.1s;
 }
 
-.header-contint .header-data form .form-group a:hover::after{
+.header-contint .header-data form .form-group a:focus::after{
   transform: translateY(0%);
 }
 
@@ -102,7 +104,7 @@ header{
   transition: 0.3s transform linear 0.1s, 0.3s opacity linear;
 }
 
-.header-contint .header-data form .form-group a:hover span{
+.header-contint .header-data form .form-group a:focus span{
   transform: translateY(200%);
   opacity: 0;
 }
@@ -164,6 +166,69 @@ header{
   right: 0;
 }
 
+.header-animation{
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.header-animation div{
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: inset 0 0 2px 3px var(--primary);
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  left: 30px;
+  animation:header-animation 20s linear infinite alternate;
+}
+
+.header-animation div:first-of-type{
+  width: 70px;
+  height: 70px;
+}
+
+.header-animation div:nth-of-type(2){
+  width: 50px;
+  height: 50px;
+  animation-direction: alternate-reverse;
+}
+
+.header-animation div:last-of-type{
+  width: 50px;
+  height: 50px;
+  animation-delay: 10s;
+}
+
+@keyframes header-animation{
+  0%{
+    opacity: 0;
+  }
+  16%, 48%, 78%{
+    top: 80%;
+    opacity: 0.3;
+  }
+  32%{
+    top: 20%;
+    opacity: 0.5s;
+  }
+  62%{
+    top: 50%;
+    opacity: 0.4;
+  }
+  90%{
+    top: 60%;
+    opacity: 0.3;
+  }
+  100%{
+    top: 80%;
+    left: 90%;
+    opacity: 0.5;
+  }
+
+}
 /*********about********************/
 
 .about-contint{
@@ -731,7 +796,7 @@ header{
 
 
 .testimonials-contint::-webkit-scrollbar{
-  width: 0px;
+  display: none;
 }
 
 .testimonials-contint .testimonials-box{

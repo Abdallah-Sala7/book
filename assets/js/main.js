@@ -6,8 +6,10 @@ let start = false;
 window.addEventListener('scroll', () => {
   if (window.scrollY > 30) {
     nav.classList.add('active');
+    document.querySelector('body').classList.add('active');
   } else {
     nav.classList.remove('active');
+    document.querySelector('body').classList.remove('active');
   }
 
   if (window.scrollY >= stats.offsetTop - window.innerHeight / 2) {
