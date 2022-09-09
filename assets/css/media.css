@@ -42,6 +42,33 @@
   .weekly-contint .weekly-card{
     width:48%;
   }
+
+  .achiev-contint .achiev-box{
+   width: 48%;
+  }
+
+  .event-contint .event-box{
+    width: calc((50% - 1px));
+  }
+
+  .testimonials-contint .testimonials-box{
+    width: 48%;
+  }
+
+  .testimonials .scroll-btns .scroll-btn{
+    width: 60px;
+    height: 60px;
+  }
+
+  .blog-contint{
+    justify-content: space-between;
+  }
+
+  .blog-contint .blog-item{
+    width: 48%;
+  }
+
+
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -97,6 +124,39 @@
 
   .weekly-contint .weekly-card{
     width: calc((100% / 4) - 15px);
+  }
+
+  /*  */
+
+  .achiev-contint .achiev-box{
+    width: calc((100% / 3) - 14px)
+  }
+
+  /*  */
+
+  .event-contint .event-box{
+    width: calc((100% / 4) - 1px);
+  }
+
+  /*  */
+  .testimonials-contint .testimonials-box{
+    width: calc((100% / 3) - 15px);
+  }
+  /*  */
+  .blog-contint .blog-item{
+    width: calc(100% / 3 - 20px);
+  }
+
+  .contact-contint .contact-form{
+    width: 60%;
+    margin-bottom: 0;
+  }
+  .contact-info-contint{
+    width: 35%;
+  }
+  /* footer */
+  footer .footer-contint .footer-bottom .footer-copyright{
+    display: block;
   }
 
 }
