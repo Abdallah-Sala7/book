@@ -22,11 +22,11 @@ nav.active{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 0px;
 }
 
 .nav-contint .brand-logo{
-  width: 170px;
+  width: 120px;
   height: 40px;
   background-color: var(--white);
 }
@@ -38,7 +38,7 @@ nav.active{
 }
 
 .nav-contint .navbar{
-  display: flex;
+  display: none;
   align-items: center;
   gap: 20px;
 }
@@ -128,4 +128,16 @@ nav.active{
 
 .nav-contint .navbar .nav-item .dropdown .drop-link:hover{
   color: var(--primary);
+}
+
+
+.nav-contint  .bars-menu{
+  width: 30px;
+  height: 30px;
+}
+
+.nav-contint  .bars-menu img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }

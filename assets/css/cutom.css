@@ -5,6 +5,11 @@
   font-family: sans-serif;
 }
 
+html{
+  scroll-behavior: smooth;
+  font-size: 13px;
+}
+
 :root{
   --primary:#c27b7f;
   --scandary:#f5ebe6;
@@ -41,11 +46,6 @@ ul{list-style: none;}
 
 input,
 textarea{outline: none;}
-
-.container{
-  width: 90%;
-  margin: 0 auto;
-}
 
 /* general  data */
 

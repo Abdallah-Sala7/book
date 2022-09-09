@@ -1,0 +1,107 @@
+.container{
+    padding: 0 15px;
+    margin: 0 auto;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .container{padding: 0; max-width: 540px;}
+
+  .header-contint .header-imgs .writer-img{
+    height: 300px;
+  }
+
+  .nav-contint .brand-logo{
+    width: 150px;
+  }
+  .state-contint .state-box{
+    width: 210px;
+  }
+  
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  .container{max-width: 720px;}
+  html{
+    font-size: 16px;
+  }
+
+  .about-contint .about-img span{
+    width: 80px;
+    height: 80px;
+  }
+
+  .nav-contint .brand-logo{
+    width: 170px;
+  }
+
+  .weekly-contint{
+    justify-content: space-between;
+  }
+
+  .weekly-contint .weekly-card{
+    width:48%;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .container{max-width: 960px;}
+
+  .nav-contint .navbar{
+    display: flex;
+  }
+
+  .nav-contint  .bars-menu{
+    display: none;
+  }
+
+  /* header */
+
+  .header-contint{
+    flex-direction: row;
+  }
+
+  .header-contint .header-data{
+    width: 48%;
+    margin-bottom: 0;
+    text-align: start;
+  }
+  .header-contint .header-data form .form-group{
+    margin: 0;
+  }
+  .header-contint .header-imgs{
+    width: 50%;
+  }
+
+  /* about */
+
+  .about-contint .about-img{
+    width: 47%;
+    height: 450px;
+    margin-bottom: 0;
+  }
+
+  .about-data{
+    width: 47%;
+  }
+
+  /*  */
+
+  .book-contint .book-imgs,
+  .book-contint .book-data{
+    width: 47%;
+  }
+
+  /*  */
+
+  .weekly-contint .weekly-card{
+    width: calc((100% / 4) - 15px);
+  }
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+  .container{max-width: 1140px;}
+}
