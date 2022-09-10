@@ -9,7 +9,6 @@
 html{
   scroll-behavior: smooth;
   font-size: 13px;
-  overflow-x: hidden;
 }
 
 :root{

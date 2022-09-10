@@ -3,10 +3,21 @@ const menu = document.querySelector('.mobile-menu');
 
 barsMenu.addEventListener('click', (e) => {
   e.preventDefault();
+  e.stopPropagation();
   barsMenu.classList.toggle('open');
   menu.classList.toggle('active');
 });
 
+window.addEventListener('click',() => {
+  if (menu.classList.contains('active')) {
+    menu.classList.remove('active');
+    barsMenu.classList.remove('open');
+  }
+});
+
+menu.addEventListener('click', (e) => {
+  e.stopPropagation();
+});
 
 
 
