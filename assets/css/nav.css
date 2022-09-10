@@ -7,7 +7,7 @@ nav{
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   background-color: var(--white);
   z-index: 1111;
-  transition: 0.3s all linear, 0s transform linear;
+  transition: 0.3s all linear;
 }
 
 nav.active{
