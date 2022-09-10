@@ -115,7 +115,7 @@ header .header-contint .header-links span img{
 }
 
 .blog-contint .blog-desc{
-  padding: 80px 100px;
+  padding: 50px;
   background-color: var(--scandary);
 }
 
@@ -148,12 +148,11 @@ header .header-contint .header-links span img{
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  height: 400px;
+  height: auto;
 }
 
 .fav-contint .fav-imgs img{
-  width: calc(100% / 2 - 10px);
+  width: 50%;
   height: 100%;
   object-fit: cover;
   object-position: top;
@@ -188,6 +187,7 @@ header .header-contint .header-links span img{
 .best-steries .share-box{
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 20px;
   padding: 30px 20px;
   background-color: var(--scandary);
@@ -218,7 +218,8 @@ header .header-contint .header-links span img{
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
   transition: 0.6s ease-in-out;
 }
 
@@ -232,8 +233,9 @@ header .header-contint .header-links span img{
 }
 
 .commint-box .commint-img{
-  width: 150px;
-  height: 150px;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -246,7 +248,8 @@ header .header-contint .header-links span img{
 
 .commint-box .commint-text{
   position: relative;
-  width: calc(100% - 200px);
+  width: 100%;
+  text-align: center;
 }
 
 .commint-box .commint-text .commint-name{
@@ -254,7 +257,7 @@ header .header-contint .header-links span img{
   font-weight: 500;
   color: var(--dark);
   text-transform: capitalize;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .commint-box .commint-text .commint-date{
@@ -262,7 +265,7 @@ header .header-contint .header-links span img{
   font-weight: 400;
   color: var(--dark-gray);
   font-style: italic;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .commint-box .commint-text .commint-desc{
@@ -271,7 +274,6 @@ header .header-contint .header-links span img{
   color: var(--dark-gray);
   line-height: 1.7rem;
 }
-
 
 .add-commint{
   padding: 30px;

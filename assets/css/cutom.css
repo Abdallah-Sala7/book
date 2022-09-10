@@ -5,9 +5,11 @@
   font-family: sans-serif;
 }
 
+
 html{
   scroll-behavior: smooth;
   font-size: 13px;
+  overflow-x: hidden;
 }
 
 :root{

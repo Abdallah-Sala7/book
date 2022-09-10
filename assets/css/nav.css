@@ -23,6 +23,7 @@ nav.active{
   justify-content: space-between;
   align-items: center;
   padding: 10px 0px;
+  position: relative;
 }
 
 .nav-contint .brand-logo{
@@ -43,17 +44,17 @@ nav.active{
   gap: 20px;
 }
 
-.nav-contint .navbar .nav-item{
+nav .nav-item{
   position: relative;
   padding: 5px;
   overflow: hidden;
 }
 
-.nav-contint .navbar .nav-item:hover{
+nav .nav-item:hover{
   overflow: visible;
 }
 
-.nav-contint .navbar .nav-item::after{
+nav .nav-item::after{
   content: '';
   position: absolute;
   bottom: 0;
@@ -65,12 +66,12 @@ nav.active{
   transition: 0.3s all linear;
 }
 
-.nav-contint .navbar .nav-item.active::after,
-.nav-contint .navbar .nav-item:hover:after{
+nav .nav-item.active::after,
+nav .nav-item:hover:after{
   width: 50%;
 }
 
-.nav-contint .navbar .nav-item .nav-link{
+nav .nav-item .nav-link{
   color: var(--dark);
   font-weight: 700;
   text-transform: capitalize;
@@ -78,12 +79,12 @@ nav.active{
   transition: 0.3s color linear;
 }
 
-.nav-contint .navbar .nav-item:hover .nav-link,
-.nav-contint .navbar .nav-item.active .nav-link{
+nav .nav-item:hover .nav-link,
+nav .nav-item.active .nav-link{
   color: var(--primary);
 }
 
-.nav-contint .navbar .nav-item .nav-link img{
+nav .nav-item .nav-link img{
   width: 20px;
   height: 20px;
   object-fit: contain;
@@ -92,15 +93,15 @@ nav.active{
   transition: 0.3s all linear;
 }
 
-.nav-contint .navbar .nav-item:hover .nav-link img{
+nav .nav-item:hover .nav-link img{
   filter: var(--primary-img);
   transform: rotate(180deg);
 }
-.nav-contint .navbar .nav-item.active .nav-link img{
+nav .nav-item.active .nav-link img{
   filter: var(--primary-img);
 }
 
-.nav-contint .navbar .nav-item .dropdown{
+nav .nav-item .dropdown{
   position: absolute;
   left: 50%;
   top: 100%;
@@ -111,33 +112,122 @@ nav.active{
   display: flex;
   flex-direction: column;
   gap: 15px;
+  z-index: 1;
   opacity: 0;
   transition: 0.3s all linear;
 }
 
-.nav-contint .navbar .nav-item:hover .dropdown{
+nav .nav-item:hover .dropdown{
   opacity: 1;
   transform: translate(-50%,0px);
 }
 
-.nav-contint .navbar .nav-item .dropdown .drop-link{
+nav .nav-item .dropdown .drop-link{
   color: var(--dark);
   text-transform: capitalize;
   transition: 0.3s color linear;
 }
 
-.nav-contint .navbar .nav-item .dropdown .drop-link:hover{
+nav .nav-item .dropdown .drop-link:hover{
   color: var(--primary);
 }
 
-
-.nav-contint  .bars-menu{
-  width: 30px;
+.bars-menu {
+  width: 40px;
   height: 30px;
+  position: relative;
+  transition: .5s ease-in-out;
+  cursor: pointer;
 }
 
-.nav-contint  .bars-menu img{
+.bars-menu span {
+  display: block;
+  position: absolute;
+  height: 7px;
+  width: 50%;
+  background: var(--primary);
+  opacity: 1;
+  transition: .3s ease-in-out;
+}
+
+.bars-menu span:nth-child(even) {
+  left: 50%;
+  border-radius: 0 7px 7px 0;
+}
+
+.bars-menu span:nth-child(odd) {
+  left:0px;
+  border-radius: 7px 0 0 7px;
+}
+
+.bars-menu span:nth-child(1), .bars-menu span:nth-child(2) {
+  top: 0px;
+}
+
+.bars-menu span:nth-child(3), .bars-menu span:nth-child(4) {
+  top: 12px;
+}
+
+.bars-menu span:nth-child(5), .bars-menu span:nth-child(6) {
+  top: 24px;
+}
+
+.bars-menu.open span:nth-child(1),.bars-menu.open span:nth-child(6) {
+  transform: rotate(45deg);
+}
+
+.bars-menu.open span:nth-child(2),.bars-menu.open span:nth-child(5) {
+  transform: rotate(-45deg);
+}
+
+.bars-menu.open span:nth-child(1) {
+  left: 4px;
+  top: 5px;
+}
+
+.bars-menu.open span:nth-child(2) {
+  left: calc(50% - 4px);
+  top: 5px;
+}
+
+.bars-menu.open span:nth-child(3) {
+  left: -50%;
+  opacity: 0;
+}
+
+.bars-menu.open span:nth-child(4) {
+  left: 100%;
+  opacity: 0;
+}
+
+.bars-menu.open span:nth-child(5) {
+  left: 3px;
+  top: 20px;
+}
+
+.bars-menu.open span:nth-child(6) {
+  left: calc(50% - 3px);
+  top: 20px;
+}
+
+nav .mobile-menu{
+  position: absolute;
+  top: 100%;
+  left: 0;
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  background-color: var(--white);
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 5px;
+  transform: translateX(150%);
+  opacity: 0;
+  transition: 0.6s all linear;
+}
+
+nav .mobile-menu.active{
+  transform: translate(0);
+  opacity: 1;
 }
